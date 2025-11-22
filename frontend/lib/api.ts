@@ -5,7 +5,7 @@
 
 import { Category, EmissionFactor, Activity, EmissionSummary, EconomicImpact, User, LoginData, CategorySummary, BiggestImpactors, TimeSummary } from '@/types';
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
 export const api = {
   /**
@@ -20,11 +20,11 @@ export const api = {
       body: JSON.stringify(loginData),
     });
     const result = await response.json();
-    
+
     if (!response.ok) {
       throw new Error(result.message || 'Login failed');
     }
-    
+
     // The backend should return the full user object
     return {
       _id: result.user_id || result._id,
@@ -48,13 +48,13 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     });
-    
+
     const result = await response.json();
-    
+
     if (!response.ok) {
       throw new Error(result.message || 'Sign up failed');
     }
-    
+
     return {
       _id: result.user_id || result._id,
       username: result.username,
@@ -76,13 +76,13 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     });
-    
+
     const result = await response.json();
-    
+
     if (!response.ok) {
       throw new Error(result.message || 'Invalid email or password');
     }
-    
+
     return {
       _id: result.user_id || result._id,
       username: result.username,
@@ -98,11 +98,11 @@ export const api = {
    */
   getUser: async (userId: string): Promise<User> => {
     const response = await fetch(`${API_BASE_URL}/users/${userId}`);
-    
+
     if (!response.ok) {
       throw new Error('Failed to fetch user');
     }
-    
+
     return response.json();
   },
 
@@ -112,11 +112,11 @@ export const api = {
    */
   getCategories: async (): Promise<Category[]> => {
     const response = await fetch(`${API_BASE_URL}/categories`);
-    
+
     if (!response.ok) {
       throw new Error('Failed to fetch categories');
     }
-    
+
     return response.json();
   },
 
@@ -130,13 +130,13 @@ export const api = {
     const params = new URLSearchParams();
     if (category) params.append('category', category);
     if (search) params.append('search', search);
-    
+
     const response = await fetch(`${API_BASE_URL}/emission-factors?${params}`);
-    
+
     if (!response.ok) {
       throw new Error('Failed to fetch emission factors');
     }
-    
+
     return response.json();
   },
 
@@ -152,13 +152,13 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(activityData),
     });
-    
+
     const result = await response.json();
-    
+
     if (!response.ok) {
       throw new Error(result.message || 'Failed to create activity');
     }
-    
+
     return result;
   },
 
@@ -169,11 +169,11 @@ export const api = {
    */
   getUserActivities: async (userId: string): Promise<Activity[]> => {
     const response = await fetch(`${API_BASE_URL}/users/${userId}/activities`);
-    
+
     if (!response.ok) {
       throw new Error('Failed to fetch user activities');
     }
-    
+
     return response.json();
   },
 
@@ -277,7 +277,7 @@ export const api = {
 
     return result;
   },
-  
+
   /**
    * Deletes an activity for a user.
    * @param {string} userId - The ID of the user.
@@ -296,9 +296,9 @@ export const api = {
 
     // Success returns an empty 200/204, or the JSON message {"message": "..."}
     try {
-        return await response.json();
+      return await response.json();
     } catch {
-        return { message: 'Activity deleted successfully' };
+      return { message: 'Activity deleted successfully' };
     }
   },
 };
