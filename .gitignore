@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+myvenv/
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Frontend (excluding from this push)
+frontend/
+node_modules/
+package.json
+package-lock.json
+postcss.config.js
+tailwind.config.ts
+
+# Data files
+*.csv
+*.xlsx
+*.db
+*.sqlite
+data/
+
+# Jupyter
+*.ipynb
+.ipynb_checkpoints/
