@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from .data_service import DatabaseService
-from models import ActivityCreate, ActivityResponse, UserCreate, UserSignUp, UserSignIn, UserResponse, EmissionSummary, EconomicImpact,ActivityUpdate
+from .models import ActivityCreate, ActivityResponse, UserCreate, UserSignUp, UserSignIn, UserResponse, EmissionSummary, EconomicImpact,ActivityUpdate
 from bson import ObjectId
 import json
 
