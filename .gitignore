@@ -29,14 +29,6 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Frontend (excluding from this push)
-frontend/
-node_modules/
-package.json
-package-lock.json
-postcss.config.js
-tailwind.config.ts
-
 # Data files
 *.csv
 *.xlsx
@@ -47,3 +39,9 @@ data/
 # Jupyter
 *.ipynb
 .ipynb_checkpoints/
+
+
+node_modules/
+frontend/node_modules/
+
+
