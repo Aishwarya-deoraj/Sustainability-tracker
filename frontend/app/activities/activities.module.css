@@ -1,0 +1,111 @@
+/* frontend/app/activities/activities.module.css */
+
+.container {
+  max-width: 42rem; /* max-w-2xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pageTitle {
+  font-size: 30px; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  color: #1f2937; /* text-gray-800 */
+  margin-bottom: 32px; /* mb-8 */
+}
+
+.formContainer {
+  background-color: #ffffff;
+  padding: 24px; /* p-6 */
+  border-radius: 12px; /* rounded-lg (matches dashboard cards) */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* space-y-6 */
+}
+
+.formGroup {
+  /* This is just a container div, no extra styles needed */
+}
+
+.formLabel {
+  display: block;
+  font-size: 14px; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: #374151; /* text-gray-700 */
+  margin-bottom: 8px; /* mb-2 */
+}
+
+.formInput,
+.formSelect {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 6px; /* rounded-md */
+  font-size: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formInput:focus,
+.formSelect:focus {
+  border-color: #22c55e; /* focus:border-green-500 */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1); /* focus:ring-2 */
+}
+
+.formHint {
+  font-size: 14px; /* text-sm */
+  color: #6b7280; /* text-gray-500 */
+  margin-top: 4px; /* mt-1 */
+}
+
+.loadingBox {
+  text-align: center;
+  padding: 16px;
+  border: 1px dashed #d1d5db; /* border-dashed border-gray-300 */
+  border-radius: 6px; /* rounded-md */
+}
+
+.loadingBox p {
+  color: #6b7280; /* text-gray-500 */
+  margin: 0;
+}
+
+.message {
+  margin-bottom: 16px; /* mb-4 */
+  padding: 12px; /* p-3 */
+  border-radius: 6px; /* rounded */
+}
+
+.messageSuccess {
+  background-color: #f0fdf4; /* bg-green-100 */
+  color: #166534; /* text-green-700 */
+}
+
+.messageError {
+  background-color: #fef2f2; /* bg-red-100 */
+  color: #dc2626; /* text-red-700 */
+}
+
+.submitButton {
+  width: 100%;
+  background-color: #22c55e; /* bg-green-600 */
+  color: #ffffff;
+  padding: 10px 16px; /* py-2 px-4 */
+  border: none;
+  border-radius: 6px; /* rounded-md */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #16a34a; /* hover:bg-green-700 */
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

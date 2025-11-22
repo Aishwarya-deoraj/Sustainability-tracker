@@ -1,0 +1,211 @@
+.loginContainer {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7e9 0%, #c8e6c9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+  
+  .heroCard {
+    flex: 1;
+    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+    color: white;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .appLogo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .appLogoIcon {
+    font-size: 28px;
+    margin-right: 12px;
+  }
+  
+  .appLogoText {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .heroTitle {
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .heroDescription {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+  }
+  
+  .featuresList {
+    list-style: none;
+    margin-bottom: 40px;
+  }
+  
+  .featureItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .featureIcon {
+    margin-right: 12px;
+    color: #a5d6a7;
+  }
+  
+  .ctaButton {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+  }
+  
+  .ctaButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .loginCard {
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .loginHeader {
+    margin-bottom: 30px;
+  }
+  
+  .loginTitle {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .loginSubtitle {
+    color: #666;
+  }
+  
+  .signUpLink {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .signUpLink:hover {
+    text-decoration: underline;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .formLabel {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .formInput {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .formInput:focus {
+    border-color: #4caf50;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+  }
+  
+  .loginButton {
+    width: 100%;
+    padding: 14px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .loginButton:hover:not(:disabled) {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  }
+  
+  .loginButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .errorMessage {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .footerText {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    
+    .heroCard, .loginCard {
+      padding: 40px 30px;
+    }
+    
+    .heroTitle {
+      font-size: 28px;
+    }
+    
+    .loginTitle {
+      font-size: 24px;
+    }
+  }

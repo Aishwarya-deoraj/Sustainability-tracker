@@ -1,0 +1,273 @@
+/* frontend/app/dashboard/dashboard.module.css */
+
+/* --- Main Layout --- */
+.dashboardContainer {
+  min-height: 100%;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* --- Total Card (Full Width) --- */
+.totalEmissionsCard {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  color: white;
+  padding: 32px 24px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
+  text-align: center;
+  /* This is the only full-width item */
+  grid-column: 1 / -1; 
+}
+
+.totalEmissionsCard h2 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.totalEmissionsCard .totalNumber {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.totalEmissionsCard .totalUnit {
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.9;
+  margin-left: 8px;
+}
+
+/* --- Universal Card Style --- */
+.dashboardCard {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.dashboardCard h2 {
+  color: #333;
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 8px;
+}
+
+/* --- Card Content Grids/Lists --- */
+.summaryList,
+.emissionsGrid,
+.economicGrid,
+.activitiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* --- Summary Item Styles (for new query cards) --- */
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+.summaryItem .name {
+  font-weight: 600;
+  color: #333;
+}
+.summaryItem .amount {
+  font-weight: 600;
+}
+.summaryItem .amount-red {
+  color: #d32f2f;
+}
+.summaryItem .amount-green {
+  color: #2e7d32;
+}
+
+/* --- Physical Emissions Item --- */
+.emissionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #4caf50;
+}
+.category {
+  font-weight: 600;
+  color: #333;
+}
+.amount {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* --- Economic Impact Item --- */
+.economicItem {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 16px;
+  align-items: center;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #ff9800;
+}
+.sector {
+  font-weight: 600;
+  color: #333;
+}
+.spending {
+  color: #ff9800;
+  font-weight: 600;
+}
+.emissions {
+  font-weight: 600;
+}
+
+/* --- Recent Activity Item --- */
+.activityItem {
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+.activityHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.activityName {
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
+}
+.activityEmissions {
+  color: #d32f2f;
+  font-weight: 600;
+  font-size: 14px;
+}
+.activityDetails {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #666;
+}
+.activityCategory {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* --- Utility Classes --- */
+.emptyState {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+.emptyState p {
+  margin: 0;
+  font-style: italic;
+}
+.dashboardLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #666;
+}
+/* ADD THESE to dashboard.module.css */
+
+.fullWidthCard {
+  grid-column: 1 / -1;
+}
+
+.toggleButton {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+}
+.activityActions {
+  display: flex; 
+  gap: 8px;
+  margin-top: 8px; 
+  padding-top: 8px; 
+  border-top: 1px solid #f0f0f0; 
+}
+
+
+.buttonIcon {
+  background-color: #f7f7f7;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 4px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.buttonIcon:hover {
+  background-color: #e5e5e5;
+  border-color: #bbb;
+}
+
+.buttonDelete {
+  background-color: #ffeded; 
+  color: #cc0000; 
+  border: 1px solid #f09999;
+}
+
+.buttonDelete:hover {
+  background-color: #ffcccc; 
+  color: #990000;
+}
+
+.activeButton {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #2e7d32;
+  border: 1px solid #2e7d32;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+  .economicItem {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .activityDetails {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  
+}
