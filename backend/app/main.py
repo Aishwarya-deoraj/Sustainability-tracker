@@ -1,15 +1,10 @@
 # ============================================================================
 # IMPORTS
 # ============================================================================
-# FastAPI framework for building the REST API
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-
-# Internal modules for database operations and data models
 from .data_service import DatabaseService
 from .models import ActivityCreate, ActivityResponse, UserCreate, UserSignUp, UserSignIn, UserResponse, EmissionSummary, EconomicImpact,ActivityUpdate
-
-# MongoDB ObjectId handling and JSON serialization
 from bson import ObjectId
 import json
 
@@ -20,17 +15,14 @@ import json
 # Initialize FastAPI application with metadata
 app = FastAPI(title="Sustainability Tracker API", version="1.0.0")
 
-# Configure CORS middleware to allow cross-origin requests from frontend
-# In production, replace "*" with specific frontend domain for security
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins (adjust for production)
-    allow_credentials=True,  # Allow cookies and authentication headers
-    allow_methods=["*"],  # Allow all HTTP methods (GET, POST, PUT, DELETE, etc.)
-    allow_headers=["*"],  # Allow all headers
+    allow_origins=["*"],  
+    allow_credentials=True, 
+    allow_methods=["*"],  
+    allow_headers=["*"],  
 )
 
-# Initialize database service for MongoDB operations
 db_service = DatabaseService()
 
 # ============================================================================

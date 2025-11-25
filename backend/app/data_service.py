@@ -1,13 +1,13 @@
 # ============================================================================
 # IMPORTS
 # ============================================================================
-import os  # For environment variable access
-import certifi  # For SSL certificate verification with MongoDB Atlas
-from pymongo import MongoClient  # MongoDB database driver
-from dotenv import load_dotenv  # Load environment variables from .env file
-from bson.objectid import ObjectId  # MongoDB ObjectId handling
-from datetime import datetime  # Timestamp management
-import bcrypt  # Password hashing for secure authentication
+import os 
+import certifi
+from pymongo import MongoClient 
+from dotenv import load_dotenv 
+from bson.objectid import ObjectId 
+from datetime import datetime 
+import bcrypt
 
 # Load environment variables (MONGODB_URI, etc.)
 load_dotenv()
@@ -415,12 +415,10 @@ class DatabaseService:
                 "as": "category_info"
             }},
             {"$unwind": "$category_info"},
-            
-            # Project (select) specific fields for response
             {"$project": {
                 "_id": 1,
-                "name": "$factor_details.item_name",  # e.g., "Beef", "Electricity"
-                "category": "$category_info.name",  # e.g., "Food", "Energy"
+                "name": "$factor_details.item_name",
+                "category": "$category_info.name",
                 "quantity": 1,
                 "monetary_amount": 1,
                 "emissions": "$total_co2e",
