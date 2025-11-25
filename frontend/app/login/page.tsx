@@ -31,7 +31,7 @@ export default function LoginPage() {
    */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validation
     if (!username.trim()) {
       setError('Username is required');
@@ -89,7 +89,7 @@ export default function LoginPage() {
 
       // Store user in local storage
       auth.setCurrentUser(userData);
-      
+
       // Redirect to dashboard
       router.push('/dashboard');
     } catch (error: any) {
@@ -121,10 +121,10 @@ export default function LoginPage() {
           <div className="heroContent">
             <h2 className="heroTitle">Track Your Impact, Protect Our Planet</h2>
             <p className="heroDescription">
-              Monitor your carbon footprint, set sustainability goals, and make eco-friendly 
+              Monitor your carbon footprint, set sustainability goals, and make eco-friendly
               choices with our intuitive tracking platform.
             </p>
-            
+
             <ul className="featuresList">
               <li className="featureItem">
                 <span className="featureIcon">✓</span>
@@ -143,13 +143,13 @@ export default function LoginPage() {
                 Join a community of eco-warriors
               </li>
             </ul>
-            
+
             <a href="#" className="ctaButton">
               Learn more about sustainability
             </a>
           </div>
         </div>
-        
+
         {/* Login Card */}
         <div className="loginCard">
           <div className="loginHeader">
@@ -158,16 +158,16 @@ export default function LoginPage() {
             </h2>
             <p className="loginSubtitle">
               {isSignUp ? 'Already have an account? ' : "Don't have an account? "}
-              <button 
-                type="button" 
-                className="signUpLink" 
+              <button
+                type="button"
+                className="signUpLink"
                 onClick={toggleMode}
               >
                 {isSignUp ? 'Sign in' : 'Sign up'}
               </button>
             </p>
           </div>
-          
+
           <form onSubmit={handleSubmit}>
             <div className="formGroup">
               <label htmlFor="username" className="formLabel">
@@ -263,10 +263,6 @@ export default function LoginPage() {
               {loading ? (isSignUp ? 'Creating account...' : 'Signing in...') : (isSignUp ? 'Sign up' : 'Sign in')}
             </button>
           </form>
-          
-          <p className="footerText">
-            By continuing, you agree to our Terms of Service and Privacy Policy
-          </p>
         </div>
       </div>
     </div>
