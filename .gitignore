@@ -29,15 +29,16 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Data files
+# Data files (allow backend data files)
 *.csv
+!backend/data/*.csv
 *.xlsx
 *.db
 *.sqlite
-data/
 
-# Jupyter
+# Jupyter (allow backend load notebook)
 *.ipynb
+!backend/load.ipynb
 .ipynb_checkpoints/
 
 
