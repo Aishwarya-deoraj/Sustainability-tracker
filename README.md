@@ -8,8 +8,6 @@
 
 🔗 **[Live Demo](https://sustainability-tracker-rho.vercel.app)** • 📂 **[GitHub](https://github.com/Aishwarya-deoraj/Sustainability-tracker)** • 🎥 **[Video](https://youtu.be/aGd3UEuu2zA)**
 
-[Features](#-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [API Docs](#-api-documentation)
-
 </div>
 
 ---
