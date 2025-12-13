@@ -242,7 +242,7 @@ This project is deployed using free-tier services:
 
 ## 🐛 Known Issues
 
-- **Cold Starts**: Backend may take 30-60 seconds to respond after 15 minutes of inactivity (Render free tier limitation)
+- **Cold Starts**: Backend may take time (more than 60 seconds) to respond after 15 minutes of inactivity (Render free tier limitation)
 
 ---
 
