@@ -242,27 +242,6 @@ This project is deployed using free-tier services:
    - Add `NEXT_PUBLIC_API_URL` environment variable
 5. Update CORS settings in backend with your Vercel URL
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
-3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** to the branch (`git push origin feature/AmazingFeature`)
-5. **Open** a Pull Request
-
-### Development Guidelines
-
-- Follow existing code style
-- Write meaningful commit messages
-- Test your changes locally
-- Update documentation as needed
-
----
-
 ## 🐛 Known Issues
 
 - **Cold Starts**: Backend may take 30-60 seconds to respond after 15 minutes of inactivity (Render free tier limitation)
